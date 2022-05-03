@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#dePromocao {
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+#porPromocao {
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 58px;
+    height: 112px;
+    margin-bottom: 80px;
+}
+
+header h1 {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    color: #000000;
+}
+
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(4, 259px);
+    grid-auto-rows: minmax(472px, auto);
+    gap: 42px 16px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    padding: 16px;
+    height: 224px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    word-wrap: break-word;
+    padding: 14px;
+    padding-bottom: 0px;
+}
+
+.product-info h2 {
+    margin: 30px 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #19191D;
+}
+
+.product-info span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 10px;
+}
+
+.product-info button {
+    border: 1px solid #9DC2FF;
+    width: 88px;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #2264D1;
+    text-transform: uppercase;
+    padding: 7px 4px;
+    cursor: pointer;
+    transition: all ease .09s;
+}
+
+.product-info button:hover {
+    box-shadow: 0px 0px 5px #9DC2FF;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1187px) {
+    .vitrine {
+        grid-template-columns: repeat(3, 259px);
+    }
+}
+
+@media (max-width: 840px) {
+    .vitrine {
+        grid-template-columns: repeat(2, 259px);
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding-left: 7px;
+    }
+    .vitrine {
+        grid-template-columns: repeat(1, 259px);
+    }
+}
